@@ -1,0 +1,57 @@
+{
+  "scopeName": "source.rockbox-wps",
+  "name": "Rockbox WPS/SBS",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#directive" },
+    { "include": "#tag" },
+    { "include": "#hexcolor" },
+    { "include": "#string" }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.rockbox-wps",
+          "match": "#.*$"
+        }
+      ]
+    },
+
+    "directive": {
+      "patterns": [
+        {
+          "name": "keyword.control.rockbox-wps",
+          "match": "^(wps|sbs|fms|font|iconset|viewers iconset|background color|foreground color|highlight color|backdrop|filetype colours|show icons|selector type|scrollbar):"
+        }
+      ]
+    },
+
+    "tag": {
+      "patterns": [
+        {
+          "name": "support.function.rockbox-wps",
+          "match": "%(V[lidb]?|Fl|xl|xd|pb|mp|ia|it|fn|t|c[HhMSpd]|bl|bp|St|dr|wd|VI|Vd|Vs|Vf|Vb|pE|pS|mh|ps|mm|fc|if|and|or)"
+        }
+      ]
+    },
+
+    "hexcolor": {
+      "patterns": [
+        {
+          "name": "constant.other.color.hex.rockbox-wps",
+          "match": "\\b[0-9A-Fa-f]{6}\\b"
+        }
+      ]
+    },
+
+    "string": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.rockbox-wps",
+          "match": "\"[^\"]*\""
+        }
+      ]
+    }
+  }
+}

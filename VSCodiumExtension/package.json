@@ -1,0 +1,30 @@
+{
+  "name": "rockbox-wps-sbs-syntax",
+  "displayName": "Rockbox WPS/SBS Syntax",
+  "description": "Syntax highlighting for Rockbox .wps and .sbs skin files",
+  "version": "0.0.1",
+  "publisher": "MiraFicus",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "rockbox-wps",
+        "aliases": ["Rockbox WPS/SBS", "rockbox-wps"],
+        "extensions": [".wps", ".sbs"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rockbox-wps",
+        "scopeName": "source.rockbox-wps",
+        "path": "./syntaxes/rockbox-wps.tmLanguage.json"
+      }
+    ]
+  }
+}
