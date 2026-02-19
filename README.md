@@ -1,2 +1,2 @@
 # RockCyber
-Cyberpunk inspired Rcokbox theme.
+Cyberpunk inspired Rockbox theme based on SNARTYNEON.
