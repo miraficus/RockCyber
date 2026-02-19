@@ -3,8 +3,8 @@
 %wd
 
 #--- Preload Fonts ---#
-%Fl(3,15-Orbitron-SemiBold.fnt)
-%Fl(4,22-Orbitron-SemiBold.fnt)
+%Fl(3,15-Rajdhani-SemiBold.fnt)
+%Fl(4,22-Rajdhani-SemiBold.fnt)
 %Fl(5,29-Orbitron-SemiBold.fnt)
 %Fl(6,72-Orbitron-Bold.fnt)
 
