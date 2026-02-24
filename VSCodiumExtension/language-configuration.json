@@ -9,5 +9,11 @@
   "autoClosingPairs": [
     { "open": "(", "close": ")" },
     { "open": "<", "close": ">" }
-  ]
+  ],
+  "folding": {
+    "markers": {
+      "start": "^(#region|#[-]{3,})",
+      "end": "^(#endregion|#[-]{3,})"
+    }
+  }
 }

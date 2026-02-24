@@ -1,8 +1,8 @@
 {
   "name": "rockbox-wps-sbs-syntax",
   "displayName": "Rockbox WPS/SBS Syntax",
-  "description": "Syntax highlighting for Rockbox .wps and .sbs skin files",
-  "version": "0.0.1",
+  "description": "Syntax highlighting + autocomplete + hover help + folding for Rockbox .wps and .sbs skin files",
+  "version": "1.0.0",
   "publisher": "MiraFicus",
   "engines": {
     "vscode": "^1.80.0"
@@ -24,6 +24,12 @@
         "language": "rockbox-wps",
         "scopeName": "source.rockbox-wps",
         "path": "./syntaxes/rockbox-wps.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "rockbox-wps",
+        "path": "./snippets/rockbox-wps.json"
       }
     ]
   }

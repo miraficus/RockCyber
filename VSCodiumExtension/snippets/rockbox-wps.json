@@ -1,0 +1,554 @@
+{
+  "Viewport": {
+    "prefix": "%V",
+    "body": ["%V(${1:x},${2:y},${3:width},${4:height},${5:color})"],
+    "description": "Viewport – základní obdélník na obrazovce",
+    "markdownDescription": "**%V – Viewport**\n\nDefinuje obdélník na obrazovce.\n\n```wps\n%V(x,y,width,height,color)\n```"
+  },
+
+  "Labeled Viewport": {
+    "prefix": "%Vl",
+    "body": ["%Vl(${1:name},${2:x},${3:y},${4:width},${5:height},${6:font})"],
+    "description": "Pojmenovaný viewport – lze přepínat pomocí %Vd",
+    "markdownDescription": "**%Vl – Labeled viewport**\n\nViewport s názvem, který lze aktivovat přes %Vd.\n\n```wps\n%Vl(name,x,y,width,height,font)\n```"
+  },
+
+  "Invisible Viewport": {
+    "prefix": "%Vi",
+    "body": ["%Vi(${1:name},${2:x},${3:y},${4:width},${5:height},${6:font})"],
+    "description": "Neviditelný viewport – pro logiku a přepínání",
+    "markdownDescription": "**%Vi – Invisible viewport**\n\nViewport, který se nevykresluje, ale používá se pro logiku.\n\n```wps\n%Vi(name,x,y,width,height,font)\n```"
+  },
+
+  "Viewport Activate": {
+    "prefix": "%Vd",
+    "body": ["%Vd(${1:name})"],
+    "description": "Aktivuje pojmenovaný viewport",
+    "markdownDescription": "**%Vd – Viewport display**\n\nAktivuje viewport vytvořený pomocí %Vl nebo %Vi.\n\n```wps\n%Vd(name)\n```"
+  },
+
+  "Viewport Foreground Color": {
+    "prefix": "%Vf",
+    "body": ["%Vf(${1:color})"],
+    "description": "Nastaví barvu textu ve viewportu",
+    "markdownDescription": "**%Vf – Viewport foreground color**\n\nNastaví barvu textu (foreground) pro aktuální viewport.\n\n```wps\n%Vf(RRGGBB)\n```"
+  },
+
+  "Viewport Background Color": {
+    "prefix": "%Vb",
+    "body": ["%Vb(${1:color})"],
+    "description": "Nastaví barvu pozadí viewportu",
+    "markdownDescription": "**%Vb – Viewport background color**\n\nNastaví barvu pozadí pro aktuální viewport.\n\n```wps\n%Vb(RRGGBB)\n```"
+  },
+
+  "Viewport Clear Background": {
+    "prefix": "%VB",
+    "body": ["%VB"],
+    "description": "Vyčistí pozadí viewportu",
+    "markdownDescription": "**%VB – Viewport clear background**\n\nVyčistí pozadí aktuálního viewportu.\n\n```wps\n%VB\n```"
+  },
+
+  "Draw Rectangle": {
+    "prefix": "%dr",
+    "body": ["%dr(${1:x},${2:y},${3:width},${4:height})"],
+    "description": "Nakreslí čáru nebo obdélník",
+    "markdownDescription": "**%dr – Draw rectangle/line**\n\nNakreslí čáru nebo obdélník v rámci viewportu.\n\n```wps\n%dr(x,y,width,height)\n```"
+  },
+
+  "Disable Default Statusbar": {
+    "prefix": "%wd",
+    "body": ["%wd"],
+    "description": "Vypne defaultní Rockbox status bar",
+    "markdownDescription": "**%wd – WPS disable statusbar**\n\nVypne vestavěný status bar Rockboxu.\n\n```wps\n%wd\n```"
+  },
+
+  "Image Load": {
+    "prefix": "%xl",
+    "body": ["%xl(${1:id},${2:image.bmp},${3:count})"],
+    "description": "Načte obrázek nebo strip ikon",
+    "markdownDescription": "**%xl – Load image**\n\nNačte obrázek nebo strip ikon.\n\n```wps\n%xl(id,filename,count)\n```"
+  },
+
+  "Image Display": {
+    "prefix": "%xd",
+    "body": ["%xd(${1:id},${2:index})"],
+    "description": "Vykreslí obrázek z %xl",
+    "markdownDescription": "**%xd – Display image**\n\nVykreslí obrázek nebo ikonu načtenou pomocí %xl.\n\n```wps\n%xd(id,index)\n```"
+  },
+
+  "Progress Bar": {
+    "prefix": "%pb",
+    "body": ["%pb(${1:x},${2:y},${3:width},${4:height},${5:bg},${6:fg},${7:slider})"],
+    "description": "Progress bar – pozice přehrávání",
+    "markdownDescription": "**%pb – Progress bar**\n\nZobrazí průběh přehrávání.\n\n```wps\n%pb(x,y,width,height,bg_image,slider_image,fg_image)\n```"
+  },
+
+  "Progress Bar Simple": {
+    "prefix": "%pb-simple",
+    "body": ["%pb(${1:x},${2:y},${3:width},${4:height})"],
+    "description": "Jednoduchý progress bar bez obrázků",
+    "markdownDescription": "**%pb – Simple progress bar**\n\nJednoduchý progress bar bez obrázků.\n\n```wps\n%pb(x,y,width,height)\n```"
+  },
+
+  "Load Font": {
+    "prefix": "%Fl",
+    "body": ["%Fl(${1:id},${2:fontfile.fnt})"],
+    "description": "Načte font do paměti",
+    "markdownDescription": "**%Fl – Font load**\n\nNačte font do paměti pod daným ID.\n\n```wps\n%Fl(id,fontfile.fnt)\n```"
+  },
+
+  "Set Font": {
+    "prefix": "%Fn",
+    "body": ["%Fn(${1:id})"],
+    "description": "Nastaví aktuální font podle ID z %Fl",
+    "markdownDescription": "**%Fn – Font select**\n\nNastaví aktuální font podle ID načteného přes %Fl.\n\n```wps\n%Fn(id)\n```"
+  },
+
+  "Track Artist": {
+    "prefix": "%ia",
+    "body": ["%ia"],
+    "description": "Interpret aktuální skladby",
+    "markdownDescription": "**%ia – Current track artist**\n\nZobrazí interpreta aktuální skladby.\n\n```wps\n%ia\n```"
+  },
+
+  "Track Title": {
+    "prefix": "%it",
+    "body": ["%it"],
+    "description": "Název aktuální skladby",
+    "markdownDescription": "**%it – Current track title**\n\nZobrazí název aktuální skladby.\n\n```wps\n%it\n```"
+  },
+
+  "Track Album": {
+    "prefix": "%id",
+    "body": ["%id"],
+    "description": "Album aktuální skladby",
+    "markdownDescription": "**%id – Current track album**\n\nZobrazí název alba aktuální skladby.\n\n```wps\n%id\n```"
+  },
+
+  "Filename": {
+    "prefix": "%fn",
+    "body": ["%fn"],
+    "description": "Název souboru aktuální skladby",
+    "markdownDescription": "**%fn – Filename**\n\nZobrazí název souboru aktuální skladby.\n\n```wps\n%fn\n```"
+  },
+
+  "Track Length": {
+    "prefix": "%te",
+    "body": ["%te"],
+    "description": "Délka skladby (celkový čas)",
+    "markdownDescription": "**%te – Track length**\n\nZobrazí celkovou délku skladby.\n\n```wps\n%te\n```"
+  },
+
+  "Track Elapsed": {
+    "prefix": "%pc",
+    "body": ["%pc"],
+    "description": "Uplynulý čas skladby",
+    "markdownDescription": "**%pc – Position current**\n\nZobrazí uplynulý čas skladby.\n\n```wps\n%pc\n```"
+  },
+
+  "Track Remaining": {
+    "prefix": "%pr",
+    "body": ["%pr"],
+    "description": "Zbývající čas skladby",
+    "markdownDescription": "**%pr – Position remaining**\n\nZobrazí zbývající čas skladby.\n\n```wps\n%pr\n```"
+  },
+
+  "Track Bitrate": {
+    "prefix": "%fb",
+    "body": ["%fb"],
+    "description": "Bitrate aktuální skladby",
+    "markdownDescription": "**%fb – File bitrate**\n\nZobrazí bitrate aktuální skladby.\n\n```wps\n%fb\n```"
+  },
+
+  "Track Frequency": {
+    "prefix": "%ff",
+    "body": ["%ff"],
+    "description": "Vzorkovací frekvence",
+    "markdownDescription": "**%ff – File frequency**\n\nZobrazí vzorkovací frekvenci.\n\n```wps\n%ff\n```"
+  },
+
+  "Track Codec": {
+    "prefix": "%fc",
+    "body": ["%fc"],
+    "description": "Typ kodeku (MP3, FLAC, ...)",
+    "markdownDescription": "**%fc – File codec**\n\nZobrazí typ kodeku.\n\n```wps\n%fc\n```"
+  },
+
+  "Playlist Position": {
+    "prefix": "%pp",
+    "body": ["%pp"],
+    "description": "Pozice skladby v playlistu",
+    "markdownDescription": "**%pp – Playlist position**\n\nZobrazí pozici skladby v playlistu.\n\n```wps\n%pp\n```"
+  },
+
+  "Playlist Length": {
+    "prefix": "%pe",
+    "body": ["%pe"],
+    "description": "Počet skladeb v playlistu",
+    "markdownDescription": "**%pe – Playlist entries**\n\nZobrazí počet skladeb v playlistu.\n\n```wps\n%pe\n```"
+  },
+
+  "Volume": {
+    "prefix": "%pv",
+    "body": ["%pv"],
+    "description": "Aktuální hlasitost",
+    "markdownDescription": "**%pv – Volume**\n\nZobrazí aktuální hlasitost.\n\n```wps\n%pv\n```"
+  },
+
+  "Battery Level": {
+    "prefix": "%bl",
+    "body": ["%bl"],
+    "description": "Úroveň baterie v procentech",
+    "markdownDescription": "**%bl – Battery level**\n\nZobrazí úroveň baterie v %.\n\n```wps\n%bl\n```"
+  },
+
+  "Battery Charging": {
+    "prefix": "%bc",
+    "body": ["%bc"],
+    "description": "Stav nabíjení baterie",
+    "markdownDescription": "**%bc – Battery charging**\n\nZobrazí stav nabíjení.\n\n```wps\n%bc\n```"
+  },
+
+  "Battery Time Left": {
+    "prefix": "%bt",
+    "body": ["%bt"],
+    "description": "Odhad zbývajícího času baterie",
+    "markdownDescription": "**%bt – Battery time left**\n\nZobrazí odhad zbývajícího času.\n\n```wps\n%bt\n```"
+  },
+
+  "Play Status": {
+    "prefix": "%mp",
+    "body": ["%?mp<${1:play}|${2:pause}|${3:stop}|${4:fwd}|${5:rev}>"],
+    "description": "Stav přehrávání (play/pause/stop/...)",
+    "markdownDescription": "**%mp – Music playback status**\n\nVrací stav přehrávání.\n\n```wps\n%?mp<play|pause|stop|fwd|rev>\n```"
+  },
+
+  "Repeat Mode": {
+    "prefix": "%mm",
+    "body": ["%mm"],
+    "description": "Režim opakování",
+    "markdownDescription": "**%mm – Repeat mode**\n\nZobrazí režim opakování.\n\n```wps\n%mm\n```"
+  },
+
+  "Shuffle Mode": {
+    "prefix": "%ps",
+    "body": ["%ps"],
+    "description": "Režim shuffle",
+    "markdownDescription": "**%ps – Shuffle mode**\n\nZobrazí stav shuffle.\n\n```wps\n%ps\n```"
+  },
+
+  "Hold Switch": {
+    "prefix": "%mh",
+    "body": ["%mh"],
+    "description": "Stav HOLD přepínače",
+    "markdownDescription": "**%mh – Hold switch**\n\nZobrazí stav HOLD.\n\n```wps\n%mh\n```"
+  },
+
+  "Conditional If": {
+    "prefix": "%?if",
+    "body": ["%?if(${1:condition})<${2:true}|${3:false}>"],
+    "description": "Podmínka – základní logika",
+    "markdownDescription": "**%?if – Conditional**\n\nVyhodnotí podmínku a zobrazí jednu ze dvou větví.\n\n```wps\n%?if(condition)<true|false>\n```"
+  },
+
+  "Conditional And": {
+    "prefix": "%?and",
+    "body": ["%?and(${1:cond1},${2:cond2})<${3:true}|${4:false}>"],
+    "description": "Logický AND pro podmínky",
+    "markdownDescription": "**%?and – Logical AND**\n\nSpojí dvě podmínky logickým AND.\n\n```wps\n%?and(cond1,cond2)<true|false>\n```"
+  },
+
+  "Conditional Or": {
+    "prefix": "%?or",
+    "body": ["%?or(${1:cond1},${2:cond2})<${3:true}|${4:false}>"],
+    "description": "Logický OR pro podmínky",
+    "markdownDescription": "**%?or – Logical OR**\n\nSpojí dvě podmínky logickým OR.\n\n```wps\n%?or(cond1,cond2)<true|false>\n```"
+  },
+
+  "Timer": {
+    "prefix": "%t",
+    "body": ["%t(${1:seconds})"],
+    "description": "Časovač – zpoždění nebo animace",
+    "markdownDescription": "**%t – Timer**\n\nVloží časové zpoždění nebo animaci.\n\n```wps\n%t(seconds)\n```"
+  },
+
+  "Current Hour 24h": {
+    "prefix": "%cH",
+    "body": ["%cH"],
+    "description": "Aktuální hodina (24h)",
+    "markdownDescription": "**%cH – Current hour (24h)**\n\nZobrazí aktuální hodinu ve 24h formátu.\n\n```wps\n%cH\n```"
+  },
+
+  "Current Hour 12h": {
+    "prefix": "%ch",
+    "body": ["%ch"],
+    "description": "Aktuální hodina (12h)",
+    "markdownDescription": "**%ch – Current hour (12h)**\n\nZobrazí aktuální hodinu ve 12h formátu.\n\n```wps\n%ch\n```"
+  },
+
+  "Current Minute": {
+    "prefix": "%cM",
+    "body": ["%cM"],
+    "description": "Aktuální minuta",
+    "markdownDescription": "**%cM – Current minute**\n\nZobrazí aktuální minutu.\n\n```wps\n%cM\n```"
+  },
+
+  "Current Second": {
+    "prefix": "%cS",
+    "body": ["%cS"],
+    "description": "Aktuální sekunda",
+    "markdownDescription": "**%cS – Current second**\n\nZobrazí aktuální sekundu.\n\n```wps\n%cS\n```"
+  },
+
+  "Current Day": {
+    "prefix": "%cd",
+    "body": ["%cd"],
+    "description": "Aktuální den v měsíci",
+    "markdownDescription": "**%cd – Current day**\n\nZobrazí aktuální den v měsíci.\n\n```wps\n%cd\n```"
+  },
+
+  "Current Month": {
+    "prefix": "%cm",
+    "body": ["%cm"],
+    "description": "Aktuální měsíc (číslo)",
+    "markdownDescription": "**%cm – Current month**\n\nZobrazí aktuální měsíc jako číslo.\n\n```wps\n%cm\n```"
+  },
+
+  "Current Year": {
+    "prefix": "%cy",
+    "body": ["%cy"],
+    "description": "Aktuální rok",
+    "markdownDescription": "**%cy – Current year**\n\nZobrazí aktuální rok.\n\n```wps\n%cy\n```"
+  },
+
+  "Current Weekday": {
+    "prefix": "%cu",
+    "body": ["%cu"],
+    "description": "Den v týdnu (číslo)",
+    "markdownDescription": "**%cu – Current weekday**\n\nZobrazí den v týdnu jako číslo.\n\n```wps\n%cu\n```"
+  },
+
+  "Current Playlist Name": {
+    "prefix": "%pn",
+    "body": ["%pn"],
+    "description": "Název aktuálního playlistu",
+    "markdownDescription": "**%pn – Playlist name**\n\nZobrazí název aktuálního playlistu.\n\n```wps\n%pn\n```"
+  },
+
+  "Current Directory": {
+    "prefix": "%d1",
+    "body": ["%d1"],
+    "description": "Název aktuální složky",
+    "markdownDescription": "**%d1 – Current directory**\n\nZobrazí název aktuální složky.\n\n```wps\n%d1\n```"
+  },
+
+  "Root Directory": {
+    "prefix": "%d2",
+    "body": ["%d2"],
+    "description": "Název root složky",
+    "markdownDescription": "**%d2 – Root directory**\n\nZobrazí název root složky.\n\n```wps\n%d2\n```"
+  },
+
+  "File Count in Dir": {
+    "prefix": "%Df",
+    "body": ["%Df"],
+    "description": "Počet souborů v aktuální složce",
+    "markdownDescription": "**%Df – Directory file count**\n\nZobrazí počet souborů v aktuální složce.\n\n```wps\n%Df\n```"
+  },
+
+  "Dir Count in Dir": {
+    "prefix": "%Dd",
+    "body": ["%Dd"],
+    "description": "Počet složek v aktuální složce",
+    "markdownDescription": "**%Dd – Directory count**\n\nZobrazí počet složek v aktuální složce.\n\n```wps\n%Dd\n```"
+  },
+
+  "System Screen ID": {
+    "prefix": "%cs",
+    "body": ["%cs"],
+    "description": "ID aktuální obrazovky (menu, WPS, USB, ...)",
+    "markdownDescription": "**%cs – Current screen**\n\nVrací ID aktuální obrazovky (menu, WPS, USB...).\n\n```wps\n%cs\n```"
+  },
+
+  "Theme Setting": {
+    "prefix": "%St",
+    "body": ["%St(${1:x},${2:y},${3:w},${4:h},${5:slider},${6:backdrop},${7:setting},${8:name})"],
+    "description": "Zobrazení a ovládání nastavení (quickscreen, slider)",
+    "markdownDescription": "**%St – Setting**\n\nZobrazí a ovládá nastavení (např. jas, hlasitost).\n\n```wps\n%St(x,y,w,h,slider,backdrop,setting,name)\n```"
+  },
+
+  "Peak Meter": {
+    "prefix": "%pm",
+    "body": ["%pm"],
+    "description": "Peak meter (vizuální indikace hlasitosti)",
+    "markdownDescription": "**%pm – Peak meter**\n\nZobrazí peak meter.\n\n```wps\n%pm\n```"
+  },
+
+  "ReplayGain Mode": {
+    "prefix": "%rg",
+    "body": ["%rg"],
+    "description": "Režim ReplayGain",
+    "markdownDescription": "**%rg – ReplayGain mode**\n\nZobrazí režim ReplayGain.\n\n```wps\n%rg\n```"
+  },
+
+  "Crossfade Mode": {
+    "prefix": "%xf",
+    "body": ["%xf"],
+    "description": "Režim crossfade",
+    "markdownDescription": "**%xf – Crossfade mode**\n\nZobrazí režim crossfade.\n\n```wps\n%xf\n```"
+  },
+
+  "Show Inverted": {
+    "prefix": "%Vs",
+    "body": ["%Vs(${1:invert})"],
+    "description": "Invertuje barvy viewportu",
+    "markdownDescription": "**%Vs – Viewport style**\n\nInvertuje barvy nebo změní styl viewportu.\n\n```wps\n%Vs(invert)\n```"
+  },
+
+  "Icon Theme": {
+    "prefix": "%ic",
+    "body": ["%ic"],
+    "description": "Aktuální sada ikon",
+    "markdownDescription": "**%ic – Icon theme**\n\nZobrazí aktuální sadu ikon.\n\n```wps\n%ic\n```"
+  },
+
+  "USB Connected": {
+    "prefix": "%uc",
+    "body": ["%uc"],
+    "description": "Stav USB připojení",
+    "markdownDescription": "**%uc – USB connected**\n\nZobrazí, zda je připojeno USB.\n\n```wps\n%uc\n```"
+  },
+
+  "Database Status": {
+    "prefix": "%db",
+    "body": ["%db"],
+    "description": "Stav databáze",
+    "markdownDescription": "**%db – Database status**\n\nZobrazí stav databáze.\n\n```wps\n%db\n```"
+  },
+
+  "Recording Status": {
+    "prefix": "%rc",
+    "body": ["%rc"],
+    "description": "Stav nahrávání",
+    "markdownDescription": "**%rc – Recording status**\n\nZobrazí stav nahrávání.\n\n```wps\n%rc\n```"
+  },
+
+  "Pitch": {
+    "prefix": "%Sp",
+    "body": ["%Sp"],
+    "description": "Pitch (změna rychlosti/tónu)",
+    "markdownDescription": "**%Sp – Pitch**\n\nZobrazí aktuální pitch.\n\n```wps\n%Sp\n```"
+  },
+
+  "Speed": {
+    "prefix": "%Ss",
+    "body": ["%Ss"],
+    "description": "Rychlost přehrávání",
+    "markdownDescription": "**%Ss – Speed**\n\nZobrazí rychlost přehrávání.\n\n```wps\n%Ss\n```"
+  },
+
+  "Bookmark Exists": {
+    "prefix": "%bm",
+    "body": ["%bm"],
+    "description": "Zda existuje bookmark",
+    "markdownDescription": "**%bm – Bookmark**\n\nZobrazí, zda existuje bookmark.\n\n```wps\n%bm\n```"
+  },
+
+  "Runtime Total": {
+    "prefix": "%rt",
+    "body": ["%rt"],
+    "description": "Celkový runtime přehrávače",
+    "markdownDescription": "**%rt – Runtime total**\n\nZobrazí celkový runtime.\n\n```wps\n%rt\n```"
+  },
+
+  "Runtime Current": {
+    "prefix": "%rr",
+    "body": ["%rr"],
+    "description": "Runtime od posledního nabití",
+    "markdownDescription": "**%rr – Runtime since charge**\n\nZobrazí runtime od posledního nabití.\n\n```wps\n%rr\n```"
+  },
+
+  "Disk Activity": {
+    "prefix": "%da",
+    "body": ["%da"],
+    "description": "Aktivita disku",
+    "markdownDescription": "**%da – Disk activity**\n\nZobrazí aktivitu disku.\n\n```wps\n%da\n```"
+  },
+
+  "Free Disk Space": {
+    "prefix": "%df",
+    "body": ["%df"],
+    "description": "Volné místo na disku",
+    "markdownDescription": "**%df – Disk free**\n\nZobrazí volné místo na disku.\n\n```wps\n%df\n```"
+  },
+
+  "Total Disk Space": {
+    "prefix": "%dt",
+    "body": ["%dt"],
+    "description": "Celková kapacita disku",
+    "markdownDescription": "**%dt – Disk total**\n\nZobrazí celkovou kapacitu disku.\n\n```wps\n%dt\n```"
+  },
+
+  "Line Alignment Left": {
+    "prefix": "%al",
+    "body": ["%al"],
+    "description": "Zarovnání textu doleva",
+    "markdownDescription": "**%al – Align left**\n\nZarovná text doleva.\n\n```wps\n%al\n```"
+  },
+
+  "Line Alignment Center": {
+    "prefix": "%ac",
+    "body": ["%ac"],
+    "description": "Zarovnání textu na střed",
+    "markdownDescription": "**%ac – Align center**\n\nZarovná text na střed.\n\n```wps\n%ac\n```"
+  },
+
+  "Line Alignment Right": {
+    "prefix": "%ar",
+    "body": ["%ar"],
+    "description": "Zarovnání textu doprava",
+    "markdownDescription": "**%ar – Align right**\n\nZarovná text doprava.\n\n```wps\n%ar\n```"
+  },
+
+  "Scroll Text": {
+    "prefix": "%s",
+    "body": ["%s"],
+    "description": "Zapne scrollování textu",
+    "markdownDescription": "**%s – Scroll**\n\nZapne scrollování textu v řádku.\n\n```wps\n%sText...\n```"
+  },
+
+  "Scroll Speed": {
+    "prefix": "%ss",
+    "body": ["%ss(${1:speed})"],
+    "description": "Nastaví rychlost scrollování",
+    "markdownDescription": "**%ss – Scroll speed**\n\nNastaví rychlost scrollování.\n\n```wps\n%ss(speed)\n```"
+  },
+
+  "Scroll Delay": {
+    "prefix": "%sd",
+    "body": ["%sd(${1:delay})"],
+    "description": "Nastaví zpoždění scrollování",
+    "markdownDescription": "**%sd – Scroll delay**\n\nNastaví zpoždění před scrollováním.\n\n```wps\n%sd(delay)\n```"
+  },
+
+  "Conditional Playlist End": {
+    "prefix": "%?pe",
+    "body": ["%?pe<${1:true}|${2:false}>"],
+    "description": "Podmínka – konec playlistu",
+    "markdownDescription": "**%?pe – Playlist end conditional**\n\nPodmínka pro konec playlistu.\n\n```wps\n%?pe<true|false>\n```"
+  },
+
+  "Conditional USB": {
+    "prefix": "%?uc",
+    "body": ["%?uc<${1:usb}|${2:normal}>"],
+    "description": "Podmínka – USB připojeno",
+    "markdownDescription": "**%?uc – USB conditional**\n\nPodmínka pro USB připojení.\n\n```wps\n%?uc<usb|normal>\n```"
+  },
+
+  "Conditional Recording": {
+    "prefix": "%?rc",
+    "body": ["%?rc<${1:rec}|${2:notrec}>"],
+    "description": "Podmínka – nahrávání",
+    "markdownDescription": "**%?rc – Recording conditional**\n\nPodmínka pro stav nahrávání.\n\n```wps\n%?rc<rec|notrec>\n```"
+  }
+}
