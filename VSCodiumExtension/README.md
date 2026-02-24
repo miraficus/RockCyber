@@ -36,7 +36,6 @@ Supports two region styles:
 #----------- Main Display -----------#
 ...
 #----------- Main Display -----------#
-Kód
 
 
 #### 2) VS Code‑style regions:
@@ -44,7 +43,6 @@ Kód
 #region Main Display
 ...
 #endregion
-Kód
 
 
 Both styles can be folded and used to organize large WPS/SBS layouts.
@@ -73,7 +71,6 @@ rockbox-wps-sbs-syntax/
 │   └─ rockbox-wps.json              # All Rockbox tags + tooltips
 ├─ language-configuration.json        # Comments, folding, brackets
 └─ package.json                       # Extension definition
-Kód
 
 
 ---
@@ -90,7 +87,6 @@ Kód
 To add new tags or improve tooltips, edit:
 
 snippets/rockbox-wps.json
-Kód
 
 
 Pull requests and improvements are welcome.
